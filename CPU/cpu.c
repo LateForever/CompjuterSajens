@@ -20,4 +20,7 @@ typedef struct {
 	uint16_t ip; // Instructions pointer
 } CPU;
 
-
+// Define memory
+typedef struct {
+	uint8_t data[MEMORY_SIZE]
+} Memory;
