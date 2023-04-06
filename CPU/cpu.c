@@ -24,3 +24,5 @@ typedef struct {
 typedef struct {
 	uint8_t data[MEMORY_SIZE]
 } Memory;
+
+typedef void (*Instruction)(*CPU, *Memory); 
