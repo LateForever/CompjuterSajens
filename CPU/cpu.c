@@ -25,4 +25,13 @@ typedef struct {
 	uint8_t data[MEMORY_SIZE]
 } Memory;
 
-typedef void (*Instruction)(*CPU, *Memory); 
+typedef void (*Instruction)(CPU*, Memory*);
+
+// ADD Method
+void add(CPU* cpu, Memory* memory) {
+	uint8_t o1 = memory->data[cpu->ip + 1];
+	uint8_t o2 = memory->data[cpu->ip + 2];
+
+	cpu->a = o1 + o2;
+	cpu->ip += 3;
+}
